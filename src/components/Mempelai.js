@@ -115,6 +115,10 @@ const Info = styled.div`
   p {
     color: #3b3b3b;
     font-size: 0.9rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 0.6rem;
+    }
   }
 
   img {

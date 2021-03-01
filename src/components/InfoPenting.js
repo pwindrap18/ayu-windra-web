@@ -41,7 +41,7 @@ const InfoPenting = () => {
           </ProkesItem>
           <ProkesItem>
             <img src={JagaJarak} alt="jaga-jarak" />
-            <p>Menajaga jarak aman</p>
+            <p>Menjaga jarak aman</p>
           </ProkesItem>
           <ProkesItem>
             <img src={KontakFisik} alt="kontak-fisik" />
@@ -109,7 +109,6 @@ const ProkesItem = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 0 1rem;
   margin: 1rem 0.5rem;
   justify-content: space-evenly;
   align-items: center;
