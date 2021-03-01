@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Video from '../videos/bg.mp4';
-import { Button } from './ButtonElements';
-import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
+import { Button } from './ButtonExternal';
 import styled from 'styled-components';
+import CountDown from './CountDown';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -20,9 +20,11 @@ const HeroSection = () => {
         <HeroH1>Ayu & Windra</HeroH1>
         <HeroP2>Intimate Wedding</HeroP2>
         <HeroP>03 . 04 . 2021</HeroP>
+        <HeroP>
+          <CountDown />
+        </HeroP>
         <HeroBtnWrapper>
           <Button
-            to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
@@ -33,7 +35,7 @@ const HeroSection = () => {
             exact="true"
             offset={-80}
           >
-            Live Stream {hover ? <ArrowForward /> : <ArrowRight />}
+            <a href="/">Live Stream</a>
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
@@ -127,14 +129,4 @@ const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-
-const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 20px;
 `;

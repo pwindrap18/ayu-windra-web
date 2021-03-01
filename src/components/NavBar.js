@@ -144,7 +144,7 @@ const NavLink = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1.2rem;
   height: 100%;
   cursor: pointer;
   &.active {
@@ -166,7 +166,8 @@ const NavBtnLink = styled(Link)`
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: bold;
   outline: none;
   border: none;
   cursor: pointer;

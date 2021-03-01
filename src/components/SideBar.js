@@ -15,9 +15,6 @@ const SideBar = ({ isOpen, toggle }) => {
           <SidebarLink to="mempelai" onClick={toggle}>
             Mempelai
           </SidebarLink>
-          <SidebarLink to="lokasi" onClick={toggle}>
-            Lokasi
-          </SidebarLink>
           <SidebarLink to="akad" onClick={toggle}>
             Akad
           </SidebarLink>
@@ -82,7 +79,7 @@ const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
