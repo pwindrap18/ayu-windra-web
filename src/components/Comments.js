@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../components/firebase';
+import styled from 'styled-components;';
 
 const useComments = () => {
   const [comments, setComments] = useState([]); //useState() hook, sets initial state to an empty array
