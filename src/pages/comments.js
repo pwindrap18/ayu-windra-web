@@ -1,9 +1,10 @@
 import React from 'react';
+import Comments from '../components/Comments';
 
 const CommentsPage = () => {
   return (
     <div>
-      <h1>Comments Page</h1>
+      <Comments />
     </div>
   );
 };
