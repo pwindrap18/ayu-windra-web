@@ -23,14 +23,15 @@ const Mempelai = () => {
           <h3>Yunita Ayu Pramesti</h3>
           <p>Putri pertama dari Bapak Suwignyo Rustam dan Ibu Sugiarsi</p>
           <InstaWrapper>
-            <FaInstagram />
-            <br />
             <a
               href="https://www.instagram.com/ayuprmsty/"
               target="_blank"
               rel="noreferrer"
             >
-              ayuprmsty
+              <InstaBtn>
+                <FaInstagram size={20} color={'#fff'} />
+                <p>ayuprmsty</p>
+              </InstaBtn>
             </a>
           </InstaWrapper>
         </Info>
@@ -45,17 +46,16 @@ const Mempelai = () => {
             Satyawati
           </p>
           <InstaWrapper>
-            <div>
-              <FaInstagram />
-              <br />
-              <a
-                href="https://www.instagram.com/pwindrap/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                pwindrap
-              </a>
-            </div>
+            <a
+              href="https://www.instagram.com/pwindrap/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstaBtn>
+                <FaInstagram size={20} color={'#fff'} />
+                <p>pwindrap</p>
+              </InstaBtn>
+            </a>
           </InstaWrapper>
         </Info>
       </InfoWrapper>
@@ -142,7 +142,7 @@ const Info = styled.div`
 `;
 
 const InstaWrapper = styled.div`
-  margin-top: 10px;
+  margin-top: 14px;
   font-size: 1.3rem;
   align-items: center;
   text-align: center;
@@ -150,8 +150,14 @@ const InstaWrapper = styled.div`
 
   a {
     text-decoration: none;
-    color: #3b3b3b;
+  }
+
+  p {
+    color: #fff;
     outline: none;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 15px;
   }
 `;
 
@@ -169,5 +175,32 @@ const AndContainer = styled.div`
 
   @media screen and (max-width: 500px) {
     padding: 2rem;
+  }
+`;
+
+const InstaBtn = styled.button`
+  border-radius: 50px;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? '14px 48px' : '8px 26px')};
+  color: ${({ dark }) => (dark ? '#010606' : '#fff')};
+  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? '#fff' : '#000')};
   }
 `;

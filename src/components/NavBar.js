@@ -97,6 +97,7 @@ const NavLogo = styled(Link)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
+  outline: none;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -128,6 +129,7 @@ const NavMenu = styled.div`
   list-style: none;
   text-align: center;
   margin-right: -22px;
+  margin-left: 45px;
   @media screen and (max-width: 768px) {
     display: none;
   }

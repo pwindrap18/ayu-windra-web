@@ -78,6 +78,11 @@ const InfoContent = styled.div`
   line-height: 3rem;
   text-align: center;
 
+  h1 {
+    font-family: 'Redressed';
+    font-size: 3.5rem;
+  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;

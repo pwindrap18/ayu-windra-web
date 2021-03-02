@@ -9,7 +9,7 @@ const Details = () => {
       <DetailsContent>
         <h2>3 April 2021</h2>
         <h3>Akad Nikah & Walimatul 'Urs</h3>
-        <p className="jam">09.00 - 12.00</p>
+        <p className="jam">09.00 - 12.00 WIB</p>
         <p className="resto">SFA Steak & Resto</p>
         <p className="alamat">
           Jl. Kapten Mulyadi, Badran Asri, Cangakan, Kec. Karanganyar, Kabupaten
@@ -66,6 +66,7 @@ const DetailsContent = styled.div`
     margin-bottom: 1rem;
     font-size: clamp(1rem, 3vw, 2rem);
     padding: 0 1rem;
+    font-family: 'Redressed';
   }
 
   p {
