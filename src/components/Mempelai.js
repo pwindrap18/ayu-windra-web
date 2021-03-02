@@ -29,7 +29,7 @@ const Mempelai = () => {
               rel="noreferrer"
             >
               <InstaBtn>
-                <FaInstagram size={20} color={'#fff'} />
+                <FaInstagram size={15} color={'#fff'} />
                 <p>ayuprmsty</p>
               </InstaBtn>
             </a>
@@ -52,7 +52,7 @@ const Mempelai = () => {
               rel="noreferrer"
             >
               <InstaBtn>
-                <FaInstagram size={20} color={'#fff'} />
+                <FaInstagram size={15} color={'#fff'} />
                 <p>pwindrap</p>
               </InstaBtn>
             </a>
@@ -157,7 +157,7 @@ const InstaWrapper = styled.div`
     outline: none;
     margin-left: 5px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
   }
 `;
 
@@ -189,7 +189,7 @@ const InstaBtn = styled.button`
     #285aeb 90%
   );
   white-space: nowrap;
-  padding: ${({ big }) => (big ? '14px 48px' : '8px 26px')};
+  padding: ${({ big }) => (big ? '14px 48px' : '6px 20px')};
   color: ${({ dark }) => (dark ? '#010606' : '#fff')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   outline: none;

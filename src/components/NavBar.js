@@ -50,16 +50,7 @@ const NavBar = ({ toggle }) => {
           </NavItem>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink
-            to="/comments"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Doa & Ucapan
-          </NavBtnLink>
+          <NavBtnLink to="/comments">Doa & Ucapan</NavBtnLink>
         </NavBtn>
       </NavbarContainer>
     </Nav>

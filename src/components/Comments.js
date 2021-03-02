@@ -10,7 +10,7 @@ const useComments = () => {
     const unsubscribe = firebase
       .firestore() //access firestore
       .collection('comments')
-      .orderBy('sort') //access "items" collection
+      .orderBy('sort', 'desc') //access "items" collection
       .onSnapshot((snapshot) => {
         //You can "listen" to a document with the onSnapshot() method.
         const listComments = snapshot.docs.map((doc) => ({
@@ -51,17 +51,10 @@ const Comments = () => {
   return (
     <>
       <Container>
+        <IconContainer>
+          <Icon to="/">kembali</Icon>
+        </IconContainer>
         <FormWrap>
-          <FormContent>
-            <Form action="#">
-              <FormLabel htmlFor="for">Email</FormLabel>
-              <FormInput type="email" required />
-              <FormLabel htmlFor="for">Password</FormLabel>
-              <FormInput type="password" required />
-              <FormBtn type="submit">Continue</FormBtn>
-              <Text>Forgot password</Text>
-            </Form>
-          </FormContent>
           <FormContent>
             <Form onSubmit={onSubmit}>
               <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
@@ -82,6 +75,16 @@ const Comments = () => {
               <FormBtn type="submit">Kirim</FormBtn>
             </Form>
           </FormContent>
+          <CommentContent>
+            <CommentDisplay>
+              {listComments.map((comment) => (
+                <CommentItem key={comment.id}>
+                  <CommentName>{comment.name}</CommentName>
+                  <CommentDesc>{comment.comment}</CommentDesc>
+                </CommentItem>
+              ))}
+            </CommentDisplay>
+          </CommentContent>
         </FormWrap>
       </Container>
     </>
@@ -90,9 +93,9 @@ const Comments = () => {
 
 export default Comments;
 
-export const Container = styled.div`
-  min-height: 692px;
-  position: fixed;
+const Container = styled.div`
+  min-height: 1024px;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -106,56 +109,149 @@ export const Container = styled.div`
       rgba(0, 0, 0, 0.1) 100%
     ),
     url(${DetailBg}) no-repeat center;
+
+  @media screen and (max-width: 1024px) {
+    position: relative;
+  }
 `;
 
-export const FormWrap = styled.div`
+const Icon = styled(Link)`
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 12px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+`;
+
+const IconContainer = styled.div`
+  margin-top: 40px;
+  margin-left: 250px;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+`;
+
+const FormWrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media screen and (max-width: 400px) {
-    height: 80%;
+  align-items: center;
+  padding: 0 240px;
+  width: 100%;
+  margin-top: 70px;
+  @media screen and (max-width: 1024px) {
+    height: 100%;
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
-export const Icon = styled(Link)`
-  margin-left: 40px;
-  margin-top: 40px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 32px;
-  @media screen and (max-width: 400px) {
-    margin-left: 16px;
-    margin-top: 8px;
-  }
-`;
-
-export const FormContent = styled.div`
+const FormContent = styled.div`
   height: 80%;
   display: flex;
   width: 50%;
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 480px) {
-    padding: 10px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
   }
+`;
+
+const CommentContent = styled.div`
+  height: 80%;
+  max-height: 445px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 500px;
+    margin-bottom: 60px;
+  }
+`;
+
+const CommentDisplay = styled.div`
+  background: #fff;
+  height: 80%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  overflow-y: scroll;
+
+  @media screen and (max-width: 1024px) {
+    padding: 22px 22px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+`;
+
+const CommentName = styled.h1`
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: start;
+`;
+
+const CommentItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 40px;
+`;
+
+const CommentDesc = styled.span`
+  text-align: start;
+  margin: 24px 0;
+  color: #000;
+  font-size: 14px;
 `;
 
 const Form = styled.form`
   background: #010101;
-  max-width: 480px;
-  height: auto;
+  height: 80%;
   width: 100%;
   z-index: 1;
-  display: grid;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   padding: 40px 32px;
-  border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-  @media screen and (max-width: 400px) {
-    padding: 32px 32px;
+  @media screen and (max-width: 1024px) {
+    padding: 22px 22px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
   }
 `;
 
@@ -192,23 +288,7 @@ const FormBtn = styled.button`
   padding: 16px 0;
   border: none;
   border-radius: 4px;
-  color: #fff;
+  color: #010606;
   font-size: 20px;
   cursor: pointer;
 `;
-
-const Text = styled.span`
-  text-align: center;
-  margin-top: 24px;
-  color: #fff;
-  font-size: 14px;
-`;
-
-// {
-//   listComments.map((comment) => (
-//     <CommentItem key={comment.id}>
-//       <h1>{comment.name}</h1>
-//       <p>{comment.comment}</p>
-//     </CommentItem>
-//   ));
-// }
