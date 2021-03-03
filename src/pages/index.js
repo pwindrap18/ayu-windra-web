@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Comments from '../components/Comments';
 import Details from '../components/Details';
 import HeroSection from '../components/Hero';
 import InfoPenting from '../components/InfoPenting';
@@ -29,6 +30,7 @@ const Home = () => {
       <Mempelai />
       <Details />
       <InfoPenting />
+      <Comments />
     </>
   );
 };

@@ -7,8 +7,8 @@ import Fade from 'react-reveal/Fade';
 const Details = () => {
   return (
     <DetailsContainer id="akad">
-      <DetailsContent>
-        <Fade bottom delay={500}>
+      <Fade duration={2000}>
+        <DetailsContent>
           <h2>3 April 2021</h2>
           <h3>Akad Nikah & Walimatul 'Urs</h3>
           <p className="jam">Pukul 09.00 - 12.00 WIB</p>
@@ -26,8 +26,8 @@ const Details = () => {
               Google Maps
             </a>
           </Button>
-        </Fade>
-      </DetailsContent>
+        </DetailsContent>
+      </Fade>
     </DetailsContainer>
   );
 };
@@ -50,6 +50,7 @@ const DetailsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 `;
 const DetailsContent = styled.div`
   display: flex;

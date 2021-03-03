@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import firebase from '../components/firebase';
 import styled from 'styled-components';
 import DetailBg from '../images/details.jpg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 const useComments = () => {
   const [comments, setComments] = useState([]); //useState() hook, sets initial state to an empty array
@@ -50,30 +51,29 @@ const Comments = () => {
 
   return (
     <>
-      <Container>
-        <IconContainer>
-          <Icon to="/">Kembali</Icon>
-        </IconContainer>
+      <Container id="comments">
         <FormWrap>
           <FormContent>
-            <Form onSubmit={onSubmit}>
-              <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
-              <FormLabel htmlFor="for">Nama</FormLabel>
-              <FormInput
-                type="text"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.currentTarget.value)}
-              />
-              <FormLabel htmlFor="for">Doa & Ucapan</FormLabel>
+            <Fade top>
+              <Form onSubmit={onSubmit}>
+                <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
+                <FormLabel htmlFor="for">Nama</FormLabel>
+                <FormInput
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.currentTarget.value)}
+                />
+                <FormLabel htmlFor="for">Doa & Ucapan</FormLabel>
 
-              <FormText
-                name="comment"
-                value={comment}
-                onChange={(e) => setComment(e.currentTarget.value)}
-              />
-              <FormBtn type="submit">Kirim</FormBtn>
-            </Form>
+                <FormText
+                  name="comment"
+                  value={comment}
+                  onChange={(e) => setComment(e.currentTarget.value)}
+                />
+                <FormBtn type="submit">Kirim</FormBtn>
+              </Form>
+            </Fade>
           </FormContent>
           <CommentContent>
             <CommentDisplay>
@@ -115,35 +115,35 @@ const Container = styled.div`
   }
 `;
 
-const Icon = styled(Link)`
-  border-radius: 50px;
-  background: #fcd1d1;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 12px;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
-`;
+// const Icon = styled(Link)`
+//   border-radius: 50px;
+//   background: #fcd1d1;
+//   white-space: nowrap;
+//   padding: 10px 22px;
+//   color: #010606;
+//   font-size: 12px;
+//   font-weight: bold;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
+//   &:hover {
+//     transition: all 0.2s ease-in-out;
+//     background: #fff;
+//     color: #010606;
+//   }
+// `;
 
-const IconContainer = styled.div`
-  margin-top: 40px;
-  margin-left: 250px;
+// const IconContainer = styled.div`
+//   margin-top: 40px;
+//   margin-left: 250px;
 
-  @media screen and (max-width: 1024px) {
-    margin-top: 40px;
-    margin-left: 40px;
-  }
-`;
+//   @media screen and (max-width: 1024px) {
+//     margin-top: 40px;
+//     margin-left: 40px;
+//   }
+// `;
 
 const FormWrap = styled.div`
   height: 100%;

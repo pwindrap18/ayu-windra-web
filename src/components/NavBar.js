@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { menuData } from '../data/menuData';
 import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
-import { FaBars } from 'react-icons/fa';
+// import { FaBars } from 'react-icons/fa';
 
 const NavBar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -29,9 +29,6 @@ const NavBar = ({ toggle }) => {
         <NavLogo to="/" onClick={toggleHome}>
           A&W
         </NavLogo>
-        <MobileIcon onClick={toggle}>
-          <FaBars />
-        </MobileIcon>
         <NavMenu>
           <NavItem>
             {menuData.map((item, index) => (
@@ -50,7 +47,7 @@ const NavBar = ({ toggle }) => {
           </NavItem>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/comments">Doa & Ucapan</NavBtnLink>
+          <NavBtnLink to="comments">Doa & Ucapan</NavBtnLink>
         </NavBtn>
       </NavbarContainer>
     </Nav>
@@ -82,11 +79,14 @@ const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   max-width: 1100px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const NavLogo = styled(Link)`
   color: #fff;
-  justify-self: flex-start;
+  justify-self: flex-end;
   cursor: pointer;
   outline: none;
   font-size: 1.5rem;
@@ -95,24 +95,44 @@ const NavLogo = styled(Link)`
   font-weight: bold;
   text-decoration: none;
 
-  @media screen and (max-width: 960px) {
-    margin-left: 24px;
+  @media screen and (max-width: 768px) {
   }
 `;
 
-const MobileIcon = styled.div`
-  display: none;
-  @media screen and (max-width: 768px) {
-    color: #fff;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
+// const MobileBtn = styled(Link)`
+//   display: none;
+//   @media screen and (max-width: 768px) {
+//     color: #000;
+//     cursor: pointer;
+//     outline: none;
+//     font-size: 15px;
+//     display: flex;
+//     font-weight: bold;
+//     text-decoration: none;
+//     background: #fcd1d1;
+//     white-space: nowrap;
+//     padding: 10px 18px;
+//     margin-top: 26px;
+//     margin-right: 20px;
+//     align-items: center;
+//     height: 30px;
+//     border-radius: 20px;
+//   }
+// `;
+
+// const MobileIcon = styled.div`
+//   display: none;
+//   @media screen and (max-width: 768px) {
+//     color: #fff;
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     transform: translate(-100%, 60%);
+//     font-size: 1.8rem;
+//     cursor: pointer;
+//   }
+// `;
 
 const NavMenu = styled.div`
   display: flex;
@@ -153,7 +173,7 @@ const NavBtn = styled.nav`
   }
 `;
 
-const NavBtnLink = styled(Link)`
+const NavBtnLink = styled(LinkS)`
   border-radius: 50px;
   background: #fcd1d1;
   white-space: nowrap;

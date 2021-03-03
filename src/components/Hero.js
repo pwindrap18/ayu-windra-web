@@ -53,7 +53,7 @@ const HeroSection = () => {
         <Fade bottom delay={2000}>
           <ScrollText>
             <p>scroll</p>
-            <p>ke bawah</p>
+            <p>down</p>
           </ScrollText>
           <HiArrowNarrowDown />
         </Fade>
@@ -168,4 +168,8 @@ const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
+  }
 `;
