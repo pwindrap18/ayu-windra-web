@@ -3,6 +3,8 @@ import Video from '../videos/bg.mp4';
 import { Button } from './ButtonExternal';
 import styled from 'styled-components';
 import CountDown from './CountDown';
+import Fade from 'react-reveal/Fade';
+import { HiArrowNarrowDown } from 'react-icons/hi';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -17,35 +19,72 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Ayu & Windra</HeroH1>
-        <HeroP2>Intimate Wedding</HeroP2>
-        <HeroP>03 . 04 . 2021</HeroP>
-        <HeroP>
-          <CountDown />
-        </HeroP>
-        <HeroBtnWrapper>
-          <Button
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
-            primary="true"
-            dark="true"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            <a href="/">Live Stream</a>
-          </Button>
-        </HeroBtnWrapper>
+        <Fade duration={3000}>
+          <HeroH1>Ayu & Windra</HeroH1>
+        </Fade>
+        <Fade bottom delay={500}>
+          <HeroP2>Intimate Wedding</HeroP2>
+          <HeroP>03 . 04 . 2021</HeroP>
+        </Fade>
+        <Fade bottom delay={1000}>
+          <HeroP>
+            <CountDown />
+          </HeroP>
+        </Fade>
+        <Fade bottom delay={1500}>
+          <HeroBtnWrapper>
+            <Button
+              onMouseEnter={onHover}
+              onMouseLeave={onHover}
+              primary="true"
+              dark="true"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              <a href="/">Live Stream</a>
+            </Button>
+          </HeroBtnWrapper>
+        </Fade>
       </HeroContent>
+      <ArrowIcon>
+        <Fade bottom delay={2000}>
+          <ScrollText>
+            <p>scroll</p>
+            <p>ke bawah</p>
+          </ScrollText>
+          <HiArrowNarrowDown />
+        </Fade>
+      </ArrowIcon>
     </HeroContainer>
   );
 };
 
 export default HeroSection;
 
-export const HeroContainer = styled.div`
+const ArrowIcon = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    margin-top: 550px;
+    z-index: 3;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+  }
+`;
+
+const ScrollText = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  font-size: 1rem;
+`;
+
+const HeroContainer = styled.div`
   background: #0c0c0c;
   display: flex;
   justify-content: center;
@@ -72,7 +111,7 @@ export const HeroContainer = styled.div`
   }
 `;
 
-export const HeroBg = styled.div`
+const HeroBg = styled.div`
   position: absolute;
   top: 0;
   right: 0;
@@ -83,7 +122,7 @@ export const HeroBg = styled.div`
   overflow: hidden;
 `;
 
-export const VideoBg = styled.video`
+const VideoBg = styled.video`
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

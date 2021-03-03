@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaInstagram } from 'react-icons/fa';
+import Fade from 'react-reveal/Fade';
 
 import ImageAyu from '../images/ayu.jpg';
 import ImageWindra from '../images/windra.jpg';
@@ -8,55 +9,65 @@ import ImageWindra from '../images/windra.jpg';
 const Mempelai = () => {
   return (
     <MempelaiContainer id="mempelai">
-      <Bismillah>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</Bismillah>
-      <Surat>
-        “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
-        isteri-isteri dari jenismu sendiri, supaya kamu merasa tenang dan
-        tentram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang.
-        Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda
-        bagi kaum yang berfikir.”
-      </Surat>
-      <Surat>(QS. Ar-Rum: 21)</Surat>
+      <Fade top>
+        <Bismillah>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</Bismillah>
+      </Fade>
+      <Fade bottom>
+        <Surat>
+          “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+          isteri-isteri dari jenismu sendiri, supaya kamu merasa tenang dan
+          tentram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang.
+          Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda
+          bagi kaum yang berfikir.”
+        </Surat>
+        <Surat>(QS. Ar-Rum: 21)</Surat>
+      </Fade>
       <InfoWrapper>
         <Info>
-          <img src={ImageAyu} alt="ayu" />
-          <h3>Yunita Ayu Pramesti</h3>
-          <p>Putri pertama dari Bapak Suwignyo Rustam dan Ibu Sugiarsi</p>
-          <InstaWrapper>
-            <a
-              href="https://www.instagram.com/ayuprmsty/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <InstaBtn>
-                <FaInstagram size={15} color={'#fff'} />
-                <p>ayuprmsty</p>
-              </InstaBtn>
-            </a>
-          </InstaWrapper>
+          <Fade left>
+            <img src={ImageAyu} alt="ayu" />
+            <h3>Yunita Ayu Pramesti</h3>
+            <p>Putri pertama dari Bapak Suwignyo Rustam dan Ibu Sugiarsi</p>
+            <InstaWrapper>
+              <a
+                href="https://www.instagram.com/ayuprmsty/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <InstaBtn>
+                  <FaInstagram size={15} color={'#fcd1d1'} />
+                  <p>ayuprmsty</p>
+                </InstaBtn>
+              </a>
+            </InstaWrapper>
+          </Fade>
         </Info>
         <AndContainer>
-          <h1>&</h1>
+          <Fade duration={3000}>
+            <h1>&</h1>
+          </Fade>
         </AndContainer>
         <Info>
-          <img src={ImageWindra} alt="windra" />
-          <h3>Prasetya Windra Pratama</h3>
-          <p>
-            Putra pertama dari Bapak Harry Wiendharto (alm) dan Ibu Nuri
-            Satyawati
-          </p>
-          <InstaWrapper>
-            <a
-              href="https://www.instagram.com/pwindrap/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <InstaBtn>
-                <FaInstagram size={15} color={'#fff'} />
-                <p>pwindrap</p>
-              </InstaBtn>
-            </a>
-          </InstaWrapper>
+          <Fade right>
+            <img src={ImageWindra} alt="windra" />
+            <h3>Prasetya Windra Pratama</h3>
+            <p>
+              Putra pertama dari Bapak Harry Wiendharto (alm) dan Ibu Nuri
+              Satyawati
+            </p>
+            <InstaWrapper>
+              <a
+                href="https://www.instagram.com/pwindrap/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <InstaBtn>
+                  <FaInstagram size={15} color={'#fcd1d1'} />
+                  <p>pwindrap</p>
+                </InstaBtn>
+              </a>
+            </InstaWrapper>
+          </Fade>
         </Info>
       </InfoWrapper>
     </MempelaiContainer>
@@ -178,20 +189,9 @@ const AndContainer = styled.div`
   }
 `;
 
-const InstaBtn = styled.button`
-  border-radius: 50px;
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  white-space: nowrap;
-  padding: ${({ big }) => (big ? '14px 48px' : '6px 20px')};
-  color: ${({ dark }) => (dark ? '#010606' : '#fff')};
-  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+const InstaBtn = styled.div`
+  padding: 6px 10px;
+  color: #fcd1d1;
   outline: none;
   border: none;
   cursor: pointer;
@@ -199,6 +199,12 @@ const InstaBtn = styled.button`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+
+  p {
+    color: #fcd1d1;
+    font-size: 16px;
+  }
+
   &:hover {
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? '#fff' : '#000')};

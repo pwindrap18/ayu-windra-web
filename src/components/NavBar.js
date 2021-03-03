@@ -141,7 +141,7 @@ const NavLink = styled(LinkS)`
   height: 100%;
   cursor: pointer;
   &.active {
-    border-bottom: 2px solid #01bf71;
+    border-bottom: 2px solid #fcd1d1;
   }
 `;
 
@@ -155,7 +155,7 @@ const NavBtn = styled.nav`
 
 const NavBtnLink = styled(Link)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #fcd1d1;
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;

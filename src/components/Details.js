@@ -2,28 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 import DetailBg from '../images/details.jpg';
 import { Button } from './ButtonExternal';
+import Fade from 'react-reveal/Fade';
 
 const Details = () => {
   return (
     <DetailsContainer id="akad">
       <DetailsContent>
-        <h2>3 April 2021</h2>
-        <h3>Akad Nikah & Walimatul 'Urs</h3>
-        <p className="jam">09.00 - 12.00 WIB</p>
-        <p className="resto">SFA Steak & Resto</p>
-        <p className="alamat">
-          Jl. Kapten Mulyadi, Badran Asri, Cangakan, Kec. Karanganyar, Kabupaten
-          Karanganyar, Jawa Tengah 57712
-        </p>
-        <Button primary="true" round="true">
-          <a
-            href="https://goo.gl/maps/i72234oUjYxxELkcA"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Google Maps
-          </a>
-        </Button>
+        <Fade bottom delay={500}>
+          <h2>3 April 2021</h2>
+          <h3>Akad Nikah & Walimatul 'Urs</h3>
+          <p className="jam">Pukul 09.00 - 12.00 WIB</p>
+          <p className="resto">SFA Steak & Resto</p>
+          <p className="alamat">
+            Jl. Kapten Mulyadi, Badran Asri, Cangakan, Kec. Karanganyar,
+            Kabupaten Karanganyar, Jawa Tengah 57712
+          </p>
+          <Button primary="true" round="true">
+            <a
+              href="https://goo.gl/maps/i72234oUjYxxELkcA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Google Maps
+            </a>
+          </Button>
+        </Fade>
       </DetailsContent>
     </DetailsContainer>
   );

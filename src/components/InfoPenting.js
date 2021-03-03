@@ -4,57 +4,63 @@ import Masker from '../images/mask.svg';
 import CuciTangan from '../images/wash-your-hands.svg';
 import JagaJarak from '../images/social-distancing.svg';
 import KontakFisik from '../images/handshake.svg';
+import Flash from 'react-reveal/Flash';
+import Fade from 'react-reveal/Fade';
 
 const InfoPenting = () => {
   return (
     <InfoContainer id="informasi">
       <InfoContent>
-        <h1>Informasi Penting</h1>
-        <InfoText>
-          <p>Teruntuk keluarga dan teman - temanku</p>
-        </InfoText>
-        <InfoText>
-          <p>
-            Keinginan kami adalah dapat bertemu langsung dan merayakan
-            pernikahan kami dengan kalian semua.
-          </p>
-          <p>
-            Namun, mengingat situasi dan kondisi yang tidak memungkinkan dimasa
-            pandemi Covid-19 ini, kami memohon maaf harus membatasi tamu
-            undangan.
-          </p>
-        </InfoText>
-        <InfoText>
-          <p>
-            Dan untuk menjaga keselamatan dan kesehatan kita semua, acara akan
-            dilakukan sesuai protokol kesehatan.
-          </p>
-        </InfoText>
-        <ProkesContent>
-          <ProkesItem>
-            <img src={Masker} alt="masker" />
-            <p>Gunakan masker selama acara berlangsung</p>
-          </ProkesItem>
-          <ProkesItem>
-            <img src={CuciTangan} alt="cuci-tangan" />
-            <p>Mencuci tangan dengan sabun atau hand sanitizer</p>
-          </ProkesItem>
-          <ProkesItem>
-            <img src={JagaJarak} alt="jaga-jarak" />
-            <p>Menjaga jarak aman</p>
-          </ProkesItem>
-          <ProkesItem>
-            <img src={KontakFisik} alt="kontak-fisik" />
-            <p>Hindari kontak fisik</p>
-          </ProkesItem>
-        </ProkesContent>
-        <InfoText>
-          <p>Terima kasih atas perhatian dan perngertiannya.</p>
-        </InfoText>
-        <InfoText>
-          <p>Salam hangat,</p>
-          <p>Ayu & Windra</p>
-        </InfoText>
+        <Flash>
+          <h1>Informasi Penting</h1>
+        </Flash>
+        <Fade bottom>
+          <InfoText>
+            <p>Teruntuk keluarga dan teman - temanku</p>
+          </InfoText>
+          <InfoText>
+            <p>
+              Keinginan kami adalah dapat bertemu langsung dan merayakan
+              pernikahan kami dengan kalian semua.
+            </p>
+            <p>
+              Namun, mengingat situasi dan kondisi yang tidak memungkinkan
+              dimasa pandemi Covid-19 ini, kami memohon maaf harus membatasi
+              tamu undangan.
+            </p>
+          </InfoText>
+          <InfoText>
+            <p>
+              Dan untuk menjaga keselamatan dan kesehatan kita semua, acara akan
+              dilakukan sesuai protokol kesehatan.
+            </p>
+          </InfoText>
+          <ProkesContent>
+            <ProkesItem>
+              <img src={Masker} alt="masker" />
+              <p>Gunakan masker selama acara berlangsung</p>
+            </ProkesItem>
+            <ProkesItem>
+              <img src={CuciTangan} alt="cuci-tangan" />
+              <p>Mencuci tangan dengan sabun atau hand sanitizer</p>
+            </ProkesItem>
+            <ProkesItem>
+              <img src={JagaJarak} alt="jaga-jarak" />
+              <p>Menjaga jarak aman</p>
+            </ProkesItem>
+            <ProkesItem>
+              <img src={KontakFisik} alt="kontak-fisik" />
+              <p>Hindari kontak fisik</p>
+            </ProkesItem>
+          </ProkesContent>
+          <InfoText>
+            <p>Terima kasih atas perhatian dan pengertiannya.</p>
+          </InfoText>
+          <InfoText>
+            <p>Salam hangat,</p>
+            <p>Ayu & Windra</p>
+          </InfoText>
+        </Fade>
       </InfoContent>
     </InfoContainer>
   );

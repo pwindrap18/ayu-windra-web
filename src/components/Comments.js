@@ -52,7 +52,7 @@ const Comments = () => {
     <>
       <Container>
         <IconContainer>
-          <Icon to="/">kembali</Icon>
+          <Icon to="/">Kembali</Icon>
         </IconContainer>
         <FormWrap>
           <FormContent>
@@ -94,7 +94,7 @@ const Comments = () => {
 export default Comments;
 
 const Container = styled.div`
-  min-height: 1024px;
+  min-height: 700px;
   position: relative;
   bottom: 0;
   left: 0;
@@ -117,7 +117,7 @@ const Container = styled.div`
 
 const Icon = styled(Link)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #fcd1d1;
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
@@ -284,7 +284,7 @@ const FormText = styled.textarea`
 `;
 
 const FormBtn = styled.button`
-  background: #01bf71;
+  background: #fcd1d1;
   padding: 16px 0;
   border: none;
   border-radius: 4px;
