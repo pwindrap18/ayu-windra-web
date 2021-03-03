@@ -181,7 +181,7 @@ const AndContainer = styled.div`
   font-style: italic;
 
   h1 {
-    font-family: 'Kalam';
+    font-family: 'Sacramento';
   }
 
   @media screen and (max-width: 500px) {

@@ -142,10 +142,10 @@ export const HeroContent = styled.div`
 
 const HeroH1 = styled.h1`
   color: #fff;
-  font-size: clamp(2rem, 6vw, 4rem);
-  margin-bottom: 1.2rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
   letter-spacing: 3px;
-  padding: 0 1rem;
+  padding: 0 0rem;
   font-family: 'Sacramento';
 `;
 

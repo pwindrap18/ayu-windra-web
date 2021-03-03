@@ -94,6 +94,7 @@ const NavLogo = styled(Link)`
   align-items: center;
   font-weight: bold;
   text-decoration: none;
+  font-family: 'Sacramento';
 
   @media screen and (max-width: 768px) {
   }
