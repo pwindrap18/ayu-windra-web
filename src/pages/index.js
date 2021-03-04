@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Comments from '../components/Comments';
 import Details from '../components/Details';
+import Footer from '../components/Footer';
 import HeroSection from '../components/Hero';
 import InfoPenting from '../components/InfoPenting';
 import Mempelai from '../components/Mempelai';
@@ -31,6 +32,7 @@ const Home = () => {
       <Details />
       <InfoPenting />
       <Comments />
+      <Footer />
     </>
   );
 };
