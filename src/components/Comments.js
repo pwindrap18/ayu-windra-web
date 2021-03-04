@@ -3,7 +3,6 @@ import firebase from '../components/firebase';
 import styled from 'styled-components';
 import DetailBg from '../images/details.jpg';
 // import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 
 const useComments = () => {
   const [comments, setComments] = useState([]); //useState() hook, sets initial state to an empty array
@@ -54,26 +53,24 @@ const Comments = () => {
       <Container id="comments">
         <FormWrap>
           <FormContent>
-            <Fade top>
-              <Form onSubmit={onSubmit}>
-                <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
-                <FormLabel htmlFor="for">Nama</FormLabel>
-                <FormInput
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={(e) => setName(e.currentTarget.value)}
-                />
-                <FormLabel htmlFor="for">Doa & Ucapan</FormLabel>
+            <Form onSubmit={onSubmit}>
+              <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
+              <FormLabel htmlFor="for">Nama</FormLabel>
+              <FormInput
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.currentTarget.value)}
+              />
+              <FormLabel htmlFor="for">Doa & Ucapan</FormLabel>
 
-                <FormText
-                  name="comment"
-                  value={comment}
-                  onChange={(e) => setComment(e.currentTarget.value)}
-                />
-                <FormBtn type="submit">Kirim</FormBtn>
-              </Form>
-            </Fade>
+              <FormText
+                name="comment"
+                value={comment}
+                onChange={(e) => setComment(e.currentTarget.value)}
+              />
+              <FormBtn type="submit">Kirim</FormBtn>
+            </Form>
           </FormContent>
           <CommentContent>
             <CommentDisplay>
@@ -200,45 +197,60 @@ const CommentContent = styled.div`
 
 const CommentDisplay = styled.div`
   background: #fff;
+  border-radius: 20px;
   height: 80%;
   width: 100%;
   z-index: 1;
   display: flex;
   flex-direction: column;
   padding: 0 32px;
+  margin-left: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  -webkit-scrollbar {
+    display: none;
+  }
 
   @media screen and (max-width: 1024px) {
     padding: 22px 22px;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 `;
 
+const CommentItem = styled.div`
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+`;
+
 const CommentName = styled.h1`
-  color: #000;
+  color: #fcd1d1;
   font-size: 20px;
   font-weight: 400;
   text-align: start;
-`;
-
-const CommentItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-top: 40px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
 `;
 
 const CommentDesc = styled.span`
+  padding: 10px 20px;
   text-align: start;
-  margin: 24px 0;
-  color: #000;
+  margin: 10px 0;
+  color: #fcd1d1;
   font-size: 14px;
 `;
 
 const Form = styled.form`
+  border-radius: 20px;
   background: #010101;
   height: 80%;
   width: 100%;
@@ -257,16 +269,17 @@ const Form = styled.form`
 
 const FormH1 = styled.h1`
   margin-bottom: 40px;
-  color: #fff;
-  font-size: 20px;
+  color: #fcd1d1;
+  font-size: 25px;
   font-weight: 400;
   text-align: center;
+  font-family: 'Redressed';
 `;
 
 const FormLabel = styled.label`
   margin-bottom: 8px;
   font-size: 14px;
-  color: #fff;
+  color: #fcd1d1;
 `;
 
 const FormInput = styled.input`

@@ -44,7 +44,13 @@ const HeroSection = () => {
               exact="true"
               offset={-80}
             >
-              <a href="/">Live Stream</a>
+              <a
+                href="https://www.instagram.com/ayuprmsty3/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live Stream
+              </a>
             </Button>
           </HeroBtnWrapper>
         </Fade>
