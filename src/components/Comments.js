@@ -41,6 +41,7 @@ const Comments = () => {
         name,
         comment,
         sort: firebase.firestore.FieldValue.serverTimestamp(),
+        commentDate: new Date().toDateString(),
       })
 
       .then(() => setName(''), setComment(''));
@@ -76,6 +77,7 @@ const Comments = () => {
             <CommentDisplay>
               {listComments.map((comment) => (
                 <CommentItem key={comment.id}>
+                  <CommentDate>{new Date().toDateString()}</CommentDate>
                   <CommentName>{comment.name}</CommentName>
                   <CommentDesc>{comment.comment}</CommentDesc>
                 </CommentItem>
@@ -162,7 +164,7 @@ const FormWrap = styled.div`
 `;
 
 const FormContent = styled.div`
-  height: 80%;
+  height: 100%;
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -179,7 +181,7 @@ const FormContent = styled.div`
 
 const CommentContent = styled.div`
   height: 80%;
-  max-height: 445px;
+  max-height: 462px;
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -196,8 +198,8 @@ const CommentContent = styled.div`
 `;
 
 const CommentDisplay = styled.div`
-  background: #fff;
   border-radius: 20px;
+  background: #fff;
   height: 80%;
   width: 100%;
   z-index: 1;
@@ -209,7 +211,7 @@ const CommentDisplay = styled.div`
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  -webkit-scrollbar {
+  ::-webkit-scrollbar {
     display: none;
   }
 
@@ -236,7 +238,7 @@ const CommentName = styled.h1`
   font-size: 20px;
   font-weight: 400;
   text-align: start;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 20px;
   padding-right: 10px;
 `;
@@ -247,6 +249,14 @@ const CommentDesc = styled.span`
   margin: 10px 0;
   color: #fcd1d1;
   font-size: 14px;
+`;
+
+const CommentDate = styled.p`
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 10px;
+  color: #fcd1d1;
+  text-align: end;
 `;
 
 const Form = styled.form`
@@ -270,7 +280,7 @@ const Form = styled.form`
 const FormH1 = styled.h1`
   margin-bottom: 40px;
   color: #fcd1d1;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 400;
   text-align: center;
   font-family: 'Redressed';
