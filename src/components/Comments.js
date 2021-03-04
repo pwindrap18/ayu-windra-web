@@ -224,7 +224,6 @@ const CommentDisplay = styled.div`
 `;
 
 const CommentItem = styled.div`
-  border: 2px solid black;
   border-radius: 20px;
   background-color: #000;
   display: flex;
@@ -232,7 +231,6 @@ const CommentItem = styled.div`
   width: 100%;
   margin: 20px 0;
 `;
-
 const CommentName = styled.h1`
   color: #fcd1d1;
   font-size: 20px;
@@ -252,8 +250,8 @@ const CommentDesc = styled.span`
 `;
 
 const CommentDate = styled.p`
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
   font-size: 10px;
   color: #fcd1d1;
   text-align: end;
@@ -262,7 +260,7 @@ const CommentDate = styled.p`
 const Form = styled.form`
   border-radius: 20px;
   background: #010101;
-  height: 80%;
+  height: 462px;
   width: 100%;
   z-index: 1;
   display: flex;

@@ -24,7 +24,7 @@ const Mempelai = () => {
       </Fade>
       <InfoWrapper>
         <Info>
-          <Fade left>
+          <Fade bottom>
             <img src={ImageAyu} alt="ayu" />
             <h3>Yunita Ayu Pramesti</h3>
             <p>Putri pertama dari Bapak Suwignyo Rustam dan Ibu Sugiarsi</p>
@@ -48,7 +48,7 @@ const Mempelai = () => {
           </Fade>
         </AndContainer>
         <Info>
-          <Fade right>
+          <Fade bottom>
             <img src={ImageWindra} alt="windra" />
             <h3>Prasetya Windra Pratama</h3>
             <p>
@@ -81,7 +81,7 @@ const MempelaiContainer = styled.div`
   background: #fcfcfc;
   color: #000;
   padding: 2.5rem calc((100vw - 1300px) / 2);
-  height: 100%;
+  height: 80%;
 `;
 const Bismillah = styled.p`
   text-align: center;
@@ -137,6 +137,7 @@ const Info = styled.div`
     height: 200px;
     width: 200px;
     margin-bottom: 12px;
+    image-orientation: from-image;
 
     @media screen and (max-width: 500px) {
       border-radius: 100px;
