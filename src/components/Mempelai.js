@@ -80,7 +80,7 @@ const MempelaiContainer = styled.div`
   width: 100%;
   background: #fcfcfc;
   color: #000;
-  padding: 5rem calc((100vw - 1300px) / 2);
+  padding: 2.5rem calc((100vw - 1300px) / 2);
   height: 100%;
 `;
 const Bismillah = styled.p`
