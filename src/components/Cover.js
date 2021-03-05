@@ -30,7 +30,7 @@ export default Cover;
 
 const Container = styled.div`
   opacity: ${({ opened }) => (opened ? '0' : '100%')};
-  min-height: 692px;
+  min-height: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -47,7 +47,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 600px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     height: 80%;
     margin: 0 30px;
   }
