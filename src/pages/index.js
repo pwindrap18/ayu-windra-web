@@ -16,8 +16,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [playing, setplaying] = useState(false);
-
-  console.log(playing);
+  const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     setInterval(function () {
@@ -32,15 +31,15 @@ const Home = () => {
     <>
       <ReactPlayer
         controls
-        url="https://www.youtube.com/watch?v=_Bjf-iExroI"
+        url="https://www.youtube.com/watch?v=GdnVFREHHt8"
         width="896px"
         height="504px"
         playing={playing}
         style={{ display: 'none' }}
       />
-      <Cover setPlaying={setplaying} />
       <Modal showModal={showModal} setShowModal={setShowModal} />
       <SideBar isOpen={isOpen} toggle={toggle} />
+      <Cover setPlaying={setplaying} setOpened={setOpened} opened={opened} />
       <NavBar toggle={toggle} />
       <HeroSection />
       <Mempelai />
