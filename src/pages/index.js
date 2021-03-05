@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import ReactPlayer from 'react-player';
+
 import Comments from '../components/Comments';
+import Cover from '../components/Cover';
 import Details from '../components/Details';
 import Footer from '../components/Footer';
 import HeroSection from '../components/Hero';
@@ -12,6 +15,9 @@ import SideBar from '../components/SideBar';
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [playing, setplaying] = useState(false);
+
+  console.log(playing);
 
   useEffect(() => {
     setInterval(function () {
@@ -24,6 +30,14 @@ const Home = () => {
   };
   return (
     <>
+      <ReactPlayer
+        controls
+        url="https://www.youtube.com/watch?v=_Bjf-iExroI"
+        width="896px"
+        height="504px"
+        playing={playing}
+      />
+      <Cover setPlaying={setplaying} />
       <Modal showModal={showModal} setShowModal={setShowModal} />
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />

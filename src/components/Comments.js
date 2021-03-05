@@ -23,8 +23,6 @@ const useComments = () => {
     return () => unsubscribe();
   }, []);
 
-  console.log(comments);
-
   return comments;
 };
 

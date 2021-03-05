@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Video from '../videos/bg.mp4';
-import { Button } from './ButtonExternal';
-import styled from 'styled-components';
-import CountDown from './CountDown';
-import Fade from 'react-reveal/Fade';
 import { HiArrowNarrowDown } from 'react-icons/hi';
+import { Button } from './ButtonExternal';
+import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
+
+import Video from '../videos/bg.mp4';
+import CountDown from './CountDown';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
