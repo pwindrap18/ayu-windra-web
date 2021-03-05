@@ -29,6 +29,7 @@ const Cover = ({ setPlaying, setOpened, opened }) => {
 export default Cover;
 
 const Container = styled.div`
+  display: ${({ opened }) => (opened ? 'none' : 'block')};
   opacity: ${({ opened }) => (opened ? '0' : '100%')};
   min-height: 100%;
   position: fixed;
@@ -61,7 +62,7 @@ const Card = styled.div`
   background: #010101;
   height: 70%;
   width: 100%;
-  z-index: 99;
+  z-index: 98;
   margin: 0 auto;
   padding: 20px 20px;
   border-radius: 6px;
