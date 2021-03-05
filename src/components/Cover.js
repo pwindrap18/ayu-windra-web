@@ -99,4 +99,8 @@ const CardBtn = styled.button`
   font-size: 20px;
   cursor: pointer;
   outline: none;
+
+  :focus {
+    outline: none;
+  }
 `;
