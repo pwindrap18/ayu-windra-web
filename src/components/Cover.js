@@ -98,4 +98,5 @@ const CardBtn = styled.button`
   color: #010101;
   font-size: 20px;
   cursor: pointer;
+  outline: none;
 `;
