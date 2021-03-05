@@ -36,6 +36,7 @@ const Home = () => {
         width="896px"
         height="504px"
         playing={playing}
+        style={{ display: 'none' }}
       />
       <Cover setPlaying={setplaying} />
       <Modal showModal={showModal} setShowModal={setShowModal} />
