@@ -47,7 +47,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 600px;
+  margin: 0 400px;
   @media screen and (max-width: 900px) {
     height: 80%;
     margin: 0 30px;

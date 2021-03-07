@@ -5,12 +5,13 @@ import Comments from '../components/Comments';
 import Cover from '../components/Cover';
 import Details from '../components/Details';
 import Footer from '../components/Footer';
+import Gift from '../components/Gift';
 import HeroSection from '../components/Hero';
 import InfoPenting from '../components/InfoPenting';
 import Mempelai from '../components/Mempelai';
 import Modal from '../components/Modal';
 import NavBar from '../components/NavBar';
-import SideBar from '../components/SideBar';
+import PlayPauseBtn from '../components/PlayPauseBtn';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,7 @@ const Home = () => {
   };
   return (
     <>
+      <PlayPauseBtn playing={playing} setPlaying={setplaying} />
       <ReactPlayer
         controls
         url="https://www.youtube.com/watch?v=GdnVFREHHt8"
@@ -38,13 +40,13 @@ const Home = () => {
         style={{ display: 'none' }}
       />
       <Modal showModal={showModal} setShowModal={setShowModal} />
-      <SideBar isOpen={isOpen} toggle={toggle} />
       <Cover setPlaying={setplaying} setOpened={setOpened} opened={opened} />
       <NavBar toggle={toggle} />
       <HeroSection />
       <Mempelai />
       <Details />
       <InfoPenting />
+      <Gift />
       <Comments />
       <Footer />
     </>
