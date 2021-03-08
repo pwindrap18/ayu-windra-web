@@ -2,6 +2,8 @@ import React from 'react';
 import { GiLinkedRings } from 'react-icons/gi';
 import styled from 'styled-components';
 
+import RingBg from '../images/ring.jpg';
+
 const Cover = ({ setPlaying, setOpened, opened }) => {
   const open = () => {
     setPlaying(true);
@@ -12,7 +14,7 @@ const Cover = ({ setPlaying, setOpened, opened }) => {
     <>
       <Container opened={opened}>
         <CardContainer>
-          <Card style={{ color: '#fcd1d1' }}>
+          <Card style={{ color: '#fff' }}>
             <AnCon>
               <GiLinkedRings />
               <Announce>Wedding Announcement</Announce>
@@ -48,6 +50,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 400px;
+
   @media screen and (max-width: 900px) {
     height: 80%;
     margin: 0 30px;
@@ -59,7 +62,14 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: #010101;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 35%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url(${RingBg}) no-repeat center;
+  background-size: cover;
   height: 70%;
   width: 100%;
   z-index: 98;
@@ -82,24 +92,28 @@ const AnCon = styled.div`
 const Announce = styled.p`
   margin-top: 10px;
   font-size: 12px;
-  color: #fcd1d1;
+  color: #fff;
   font-family: 'Redressed';
 `;
 
 const CardText = styled.span`
   font-family: 'Sacramento';
-  font-size: 4rem;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 140px;
 `;
 
 const CardBtn = styled.button`
-  background: #fcd1d1;
+  background: #303030;
   padding: 12px 20px;
   border: none;
   border-radius: 30px;
-  color: #010101;
-  font-size: 20px;
+  color: #fff;
   cursor: pointer;
   outline: none;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-family: 'Redressed';
 
   :focus {
     outline: none;

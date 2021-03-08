@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { BiCopyright } from 'react-icons/bi';
 
 const Footer = () => {
@@ -9,9 +8,8 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo>A&W</SocialLogo>
             <WebsiteRights>
-              A&W <BiCopyright />
+              <span>A&W</span> <BiCopyright />
               All rights reserved.
             </WebsiteRights>
             <WebsiteRights>Karanganyar, 2021</WebsiteRights>
@@ -53,23 +51,11 @@ const SocialMediaWrap = styled.div`
   }
 `;
 
-const SocialLogo = styled(Link)`
-  color: #fff;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: 'Sacramento';
-  @media screen and (max-width: 820px) {
-    display: none;
-  }
-`;
-
 const WebsiteRights = styled.small`
   color: #fff;
   margin-bottom: 10px;
+
+  span {
+    font-family: 'Sacramento';
+  }
 `;

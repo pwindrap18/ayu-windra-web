@@ -53,7 +53,7 @@ const Mempelai = () => {
             <h3>Prasetya Windra Pratama</h3>
             <p>
               Putra pertama dari Bapak Harry Wiendharto (alm) dan Ibu Nuri
-              Satyawati
+              Setyawati
             </p>
             <InstaWrapper>
               <a

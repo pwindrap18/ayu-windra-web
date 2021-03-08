@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
+import { BiSmile } from 'react-icons/bi';
+
 import './giftStyles.css';
 import BCASvg from '../images/bca.svg';
 import MandiriSvg from '../images/mandiri.svg';
@@ -11,7 +13,16 @@ export default function Gift() {
   return (
     <Container>
       <AnimateSharedLayout>
-        <GiftTitle>Hadiah Untuk Kami</GiftTitle>
+        <GiftTextWrapper>
+          <GiftTitle>Hadiah Untuk Kami</GiftTitle>
+          <GiftText>
+            Doa dan restu adalah berkah untuk kebahagiaan kami, kehadiran kalian
+            tak dapat digantikan oleh apapun namun jika hadiah adalah bentuk
+            tanda kasih, fitur ini akan memudahkan kalian untuk memberikan
+            hadiah terbaik untuk kami. Terimakasih banyak <BiSmile />
+          </GiftText>
+        </GiftTextWrapper>
+
         <motion.ul layout initial={{ borderRadius: 25 }}>
           <Bca></Bca>
           <Mandiri></Mandiri>
@@ -24,18 +35,54 @@ export default function Gift() {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
   height: 650px;
   background-color: #fcd1d1;
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+  }
 `;
 
 const GiftTitle = styled.span`
   font-family: 'Redressed';
   font-size: 42px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 400px) {
+    text-align: center;
+    font-size: 32px;
+  }
+`;
+
+const GiftTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+`;
+
+const GiftText = styled.div`
+  font-size: 1rem;
+  text-align: start;
+  @media screen and (max-width: 400px) {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 `;
 
 function Mandiri() {

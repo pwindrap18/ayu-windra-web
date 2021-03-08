@@ -120,7 +120,7 @@ const ProkesItem = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  margin: 1rem 0.5rem;
+  margin: 1rem auto;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
