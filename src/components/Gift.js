@@ -11,7 +11,7 @@ import OVOQR from '../images/ovoqr.jpeg';
 
 export default function Gift() {
   return (
-    <Container>
+    <Container id="gift">
       <AnimateSharedLayout>
         <GiftTextWrapper>
           <GiftTitle>Hadiah Untuk Kami</GiftTitle>
@@ -19,7 +19,10 @@ export default function Gift() {
             Doa dan restu adalah berkah untuk kebahagiaan kami, kehadiran kalian
             tak dapat digantikan oleh apapun namun jika hadiah adalah bentuk
             tanda kasih, fitur ini akan memudahkan kalian untuk memberikan
-            hadiah terbaik untuk kami. Terimakasih banyak <BiSmile />
+            hadiah terbaik untuk kami.
+          </GiftText>
+          <GiftText>
+            Terimakasih banyak <BiSmile />
           </GiftText>
         </GiftTextWrapper>
 
@@ -80,7 +83,7 @@ const GiftText = styled.div`
   text-align: start;
   @media screen and (max-width: 400px) {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 10px;
   }
 `;

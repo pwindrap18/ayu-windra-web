@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { FaInstagram } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
-import ImageAyu from '../images/ayu.jpg';
-import ImageWindra from '../images/windra.jpg';
+import ImageAyu from '../images/ayu3.jpg';
+import ImageWindra from '../images/windra2.jpg';
 
 const Mempelai = () => {
   return (

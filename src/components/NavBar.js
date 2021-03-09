@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { menuData } from '../data/menuData';
 import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
-// import { FaBars } from 'react-icons/fa';
 
 const NavBar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -108,41 +107,6 @@ const NavLogo = styled(Link)`
   @media screen and (max-width: 768px) {
   }
 `;
-
-// const MobileBtn = styled(Link)`
-//   display: none;
-//   @media screen and (max-width: 768px) {
-//     color: #000;
-//     cursor: pointer;
-//     outline: none;
-//     font-size: 15px;
-//     display: flex;
-//     font-weight: bold;
-//     text-decoration: none;
-//     background: #fcd1d1;
-//     white-space: nowrap;
-//     padding: 10px 18px;
-//     margin-top: 26px;
-//     margin-right: 20px;
-//     align-items: center;
-//     height: 30px;
-//     border-radius: 20px;
-//   }
-// `;
-
-// const MobileIcon = styled.div`
-//   display: none;
-//   @media screen and (max-width: 768px) {
-//     color: #fff;
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     transform: translate(-100%, 60%);
-//     font-size: 1.8rem;
-//     cursor: pointer;
-//   }
-// `;
 
 const NavMenu = styled.div`
   display: flex;

@@ -6,7 +6,7 @@ const PlayPauseBtn = ({ playing, setPlaying }) => {
   const playPause = () => {
     setPlaying(!playing);
   };
-  console.log(playing);
+
   return (
     <Btn onClick={playPause}>
       {playing ? <BsFillPauseFill size={20} /> : <BsFillPlayFill size={20} />}
@@ -30,6 +30,9 @@ const Btn = styled.button`
   border: none;
   cursor: pointer;
   z-index: 3;
+  :focus {
+    outline: none;
+  }
 
   @media screen and (max-width: 768px) {
     bottom: 15px;
