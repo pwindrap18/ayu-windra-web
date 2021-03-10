@@ -59,7 +59,7 @@ const GiftTitle = styled.span`
   font-size: 42px;
   margin-bottom: 10px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     text-align: center;
     font-size: 32px;
   }
@@ -72,7 +72,7 @@ const GiftTextWrapper = styled.div`
   width: 50%;
   margin-bottom: 10px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     width: 100%;
     padding: 0 20px;
   }
@@ -81,7 +81,7 @@ const GiftTextWrapper = styled.div`
 const GiftText = styled.div`
   font-size: 1rem;
   text-align: start;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     text-align: center;
     font-size: 0.8rem;
     margin-bottom: 10px;
