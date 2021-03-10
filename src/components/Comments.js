@@ -112,36 +112,6 @@ const Container = styled.div`
   }
 `;
 
-// const Icon = styled(Link)`
-//   border-radius: 50px;
-//   background: #fcd1d1;
-//   white-space: nowrap;
-//   padding: 10px 22px;
-//   color: #010606;
-//   font-size: 12px;
-//   font-weight: bold;
-//   outline: none;
-//   border: none;
-//   cursor: pointer;
-//   transition: all 0.2s ease-in-out;
-//   text-decoration: none;
-//   &:hover {
-//     transition: all 0.2s ease-in-out;
-//     background: #fff;
-//     color: #010606;
-//   }
-// `;
-
-// const IconContainer = styled.div`
-//   margin-top: 40px;
-//   margin-left: 250px;
-
-//   @media screen and (max-width: 1024px) {
-//     margin-top: 40px;
-//     margin-left: 40px;
-//   }
-// `;
-
 const FormWrap = styled.div`
   height: 100%;
   display: flex;
@@ -180,6 +150,7 @@ const FormContent = styled.div`
 const CommentContent = styled.div`
   height: 80%;
   max-height: 462px;
+  min-height: 462px;
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -191,6 +162,7 @@ const CommentContent = styled.div`
     margin: 0 auto;
     width: 80%;
     max-height: 500px;
+    min-height: 500px;
     margin-bottom: 60px;
   }
 `;
@@ -199,6 +171,7 @@ const CommentDisplay = styled.div`
   border-radius: 20px;
   background: #fff;
   height: 80%;
+  min-height: 462px;
   width: 100%;
   z-index: 1;
   display: flex;
