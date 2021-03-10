@@ -2,7 +2,7 @@ import React from 'react';
 import { GiLinkedRings } from 'react-icons/gi';
 import styled from 'styled-components';
 
-import RingBg from '../images/ring.jpg';
+import RingBg from '../images/ring2.jpg';
 
 const Cover = ({ setPlaying, setOpened, opened }) => {
   const open = () => {
