@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../components/firebase';
 import styled from 'styled-components';
+import { useForm } from 'react-hook-form';
+
 import DetailBg from '../images/details.jpg';
-// import { Link } from 'react-router-dom';
 
 const useComments = () => {
-  const [comments, setComments] = useState([]); //useState() hook, sets initial state to an empty array
+  const [comments, setComments] = useState([]);
   useEffect(() => {
     const unsubscribe = firebase
-      .firestore() //access firestore
+      .firestore()
       .collection('comments')
-      .orderBy('sort', 'desc') //access "items" collection
+      .orderBy('sort', 'desc')
       .onSnapshot((snapshot) => {
-        //You can "listen" to a document with the onSnapshot() method.
         const listComments = snapshot.docs.map((doc) => ({
-          //map each document into snapshot
-          id: doc.id, //id and data pushed into items array
-          ...doc.data(), //spread operator merges data to id.
+          id: doc.id,
+          ...doc.data(),
         }));
-        setComments(listComments); //items is equal to listItems
+        setComments(listComments);
       });
     return () => unsubscribe();
   }, []);
@@ -30,8 +29,9 @@ const Comments = () => {
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = () => {
     firebase
       .firestore()
       .collection('comments')
@@ -52,22 +52,35 @@ const Comments = () => {
       <Container id="comments">
         <FormWrap>
           <FormContent>
-            <Form onSubmit={onSubmit}>
+            <Form onSubmit={handleSubmit(onSubmit)}>
               <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
               <FormLabel htmlFor="for">Nama</FormLabel>
+
               <FormInput
                 type="text"
                 name="name"
+                ref={register({ required: true })}
                 value={name}
                 onChange={(e) => setName(e.currentTarget.value)}
+                errors={errors}
               />
+              <ErrorText>
+                {errors.name && 'harap isi kolom nama terlebih dahulu'}
+              </ErrorText>
+
               <FormLabel htmlFor="for">Doa & Ucapan</FormLabel>
 
               <FormText
                 name="comment"
                 value={comment}
+                ref={register({ required: true })}
                 onChange={(e) => setComment(e.currentTarget.value)}
+                errors={errors}
               />
+              <ErrorText>
+                {errors.comment &&
+                  'harap isi kolom doa & ucapan terlebih dahulu'}
+              </ErrorText>
               <FormBtn type="submit">Kirim</FormBtn>
             </Form>
           </FormContent>
@@ -110,6 +123,13 @@ const Container = styled.div`
   @media screen and (max-width: 1024px) {
     position: relative;
   }
+`;
+
+const ErrorText = styled.span`
+  color: #ff7171;
+  font-size: 14px;
+  margin-bottom: 32px;
+  margin-top: 10px;
 `;
 
 const FormWrap = styled.div`
@@ -263,16 +283,16 @@ const FormLabel = styled.label`
 
 const FormInput = styled.input`
   padding: 16px 16px;
-  margin-bottom: 32px;
   border: none;
   border-radius: 4px;
+  background-color: ${({ errors }) => (errors.name ? '#ff7171' : 'none')};
 `;
 
 const FormText = styled.textarea`
   padding: 16px 16px;
-  margin-bottom: 32px;
   border: none;
   border-radius: 4px;
+  background-color: ${({ errors }) => (errors.comment ? '#ff7171' : 'none')};
 `;
 
 const FormBtn = styled.button`
