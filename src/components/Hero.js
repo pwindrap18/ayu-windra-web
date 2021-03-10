@@ -46,7 +46,7 @@ const HeroSection = () => {
               offset={-80}
             >
               <a
-                href="https://www.instagram.com/ayuprmsty3/"
+                href="https://www.instagram.com/ayu_windra_wedding/"
                 target="_blank"
                 rel="noreferrer"
               >
