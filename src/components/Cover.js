@@ -1,18 +1,18 @@
 import React from 'react';
 import { GiLinkedRings } from 'react-icons/gi';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import RingBg from '../images/ring2.jpg';
 
-const Cover = ({ setPlaying, setOpened, opened }) => {
+const Cover = ({ setPlaying }) => {
   const open = () => {
     setPlaying(true);
-    setOpened(true);
   };
 
   return (
     <>
-      <Container opened={opened}>
+      <Container>
         <CardContainer>
           <Card style={{ color: '#fff' }}>
             <AnCon>
@@ -20,7 +20,9 @@ const Cover = ({ setPlaying, setOpened, opened }) => {
               <Announce>Wedding Announcement</Announce>
             </AnCon>
             <CardText>A&W</CardText>
-            <CardBtn onClick={open}>Click Me</CardBtn>
+            <CardBtn onClick={open} to="/announcement">
+              Click Me
+            </CardBtn>
           </Card>
         </CardContainer>
       </Container>
@@ -31,8 +33,6 @@ const Cover = ({ setPlaying, setOpened, opened }) => {
 export default Cover;
 
 const Container = styled.div`
-  display: ${({ opened }) => (opened ? 'none' : 'block')};
-  opacity: ${({ opened }) => (opened ? '0' : '100%')};
   min-height: 100%;
   position: fixed;
   bottom: 0;
@@ -103,9 +103,10 @@ const CardText = styled.span`
   margin-bottom: 140px;
 `;
 
-const CardBtn = styled.button`
+const CardBtn = styled(Link)`
   background: #303030;
   padding: 12px 20px;
+  text-decoration: none;
   border: none;
   border-radius: 30px;
   color: #fff;
