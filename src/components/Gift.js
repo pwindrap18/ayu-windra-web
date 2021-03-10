@@ -14,20 +14,20 @@ export default function Gift() {
   return (
     <Container id="gift">
       <AnimateSharedLayout>
-        <Fade bottom>
-          <GiftTextWrapper>
-            <GiftTitle>Hadiah Untuk Kami</GiftTitle>
-            <GiftText>
-              Doa dan restu adalah berkah untuk kebahagiaan kami, kehadiran
-              kalian tak dapat digantikan oleh apapun namun jika hadiah adalah
-              bentuk tanda kasih, fitur ini akan memudahkan kalian untuk
-              memberikan hadiah terbaik untuk kami.
-            </GiftText>
-            <GiftText>
-              Terimakasih banyak <BiSmile />
-            </GiftText>
-          </GiftTextWrapper>
-        </Fade>
+        <GiftTextWrapper>
+          <GiftTitle>Hadiah Untuk Kami</GiftTitle>
+
+          <GiftText>
+            Doa dan restu adalah berkah untuk kebahagiaan kami, kehadiran kalian
+            tak dapat digantikan oleh apapun namun jika hadiah adalah bentuk
+            tanda kasih, fitur ini akan memudahkan kalian untuk memberikan
+            hadiah terbaik untuk kami.
+          </GiftText>
+          <GiftText>
+            Terimakasih banyak <BiSmile />
+          </GiftText>
+        </GiftTextWrapper>
+
         <Fade bottom>
           <motion.ul layout initial={{ borderRadius: 25 }}>
             <Bca></Bca>
