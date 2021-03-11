@@ -25,7 +25,7 @@ const NavBar = ({ toggle }) => {
   return (
     <Nav scrollNav={scrollNav}>
       <NavbarContainer>
-        <NavLogo to="/" onClick={toggleHome}>
+        <NavLogo to="/announcement" onClick={toggleHome}>
           A&W
         </NavLogo>
         <NavMenu>
