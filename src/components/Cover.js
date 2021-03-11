@@ -12,7 +12,8 @@ const Cover = ({ setPlaying }) => {
 
   return (
     <>
-      <Container>
+      <p>404 not found</p>
+      {/* <Container>
         <CardContainer>
           <Card style={{ color: '#fff' }}>
             <AnCon>
@@ -25,7 +26,7 @@ const Cover = ({ setPlaying }) => {
             </CardBtn>
           </Card>
         </CardContainer>
-      </Container>
+      </Container> */}
     </>
   );
 };
