@@ -94,7 +94,6 @@ const NavbarContainer = styled.div`
 
 const NavLogo = styled(Link)`
   color: #fff;
-  justify-self: flex-end;
   cursor: pointer;
   outline: none;
   font-size: 1.5rem;
@@ -104,7 +103,9 @@ const NavLogo = styled(Link)`
   text-decoration: none;
   font-family: 'Sacramento';
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    display: block;
+    margin: auto auto;
   }
 `;
 
@@ -115,7 +116,7 @@ const NavMenu = styled.div`
   text-align: center;
   margin-right: -22px;
   margin-left: 45px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -142,7 +143,7 @@ const NavLink = styled(LinkS)`
 const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;

@@ -169,8 +169,8 @@ const FormContent = styled.div`
 
 const CommentContent = styled.div`
   height: 80%;
-  max-height: 462px;
-  min-height: 462px;
+  max-height: 500px;
+  min-height: 500px;
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -179,7 +179,6 @@ const CommentContent = styled.div`
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
     width: 80%;
     max-height: 500px;
     min-height: 500px;
@@ -191,7 +190,7 @@ const CommentDisplay = styled.div`
   border-radius: 20px;
   background: #fff;
   height: 80%;
-  min-height: 462px;
+  min-height: 500px;
   width: 100%;
   z-index: 1;
   display: flex;
@@ -251,7 +250,7 @@ const CommentDate = styled.p`
 const Form = styled.form`
   border-radius: 20px;
   background: #010101;
-  height: 462px;
+  height: 500px;
   width: 100%;
   z-index: 1;
   display: flex;
@@ -263,6 +262,7 @@ const Form = styled.form`
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    margin-bottom: 10px;
   }
 `;
 
