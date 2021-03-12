@@ -14,11 +14,11 @@ const Mempelai = () => {
       </Fade>
       <Fade bottom>
         <Surat>
-          “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
-          isteri-isteri dari jenismu sendiri, supaya kamu merasa tenang dan
-          tentram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang.
-          Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda
-          bagi kaum yang berfikir.”
+          “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+          pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+          dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+          kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat
+          tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
         </Surat>
         <Surat>(QS. Ar-Rum: 21)</Surat>
       </Fade>
