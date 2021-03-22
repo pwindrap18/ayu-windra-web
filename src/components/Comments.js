@@ -53,7 +53,7 @@ const Comments = () => {
         <FormWrap>
           <FormContent>
             <Form onSubmit={handleSubmit(onSubmit)}>
-              <FormH1>Doa & Ucapan Untuk Kedua Mempelai</FormH1>
+              <FormH1>Doa & Ucapan</FormH1>
               <FormLabel htmlFor="for">Nama</FormLabel>
 
               <FormInput

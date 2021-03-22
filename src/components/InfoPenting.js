@@ -16,17 +16,11 @@ const InfoPenting = () => {
         </Flash>
         <Fade bottom>
           <InfoText>
-            <p>Teruntuk keluarga dan teman - temanku</p>
-          </InfoText>
-          <InfoText>
+            <p>Teruntuk keluarga dan teman - temanku,</p>
             <p>
-              Keinginan kami adalah dapat bertemu langsung dan merayakan
-              pernikahan kami dengan kalian semua.
-            </p>
-            <p>
-              Namun, mengingat situasi dan kondisi yang tidak memungkinkan
-              dimasa pandemi Covid-19 ini, kami memohon maaf harus membatasi
-              tamu undangan.
+              mengingat situasi dan kondisi yang tidak memungkinkan di masa
+              pandemi Covid-19 ini, kami memohon maaf harus membatasi tamu
+              undangan.
             </p>
           </InfoText>
           <InfoText>

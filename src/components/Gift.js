@@ -19,12 +19,12 @@ export default function Gift() {
 
           <GiftText>
             Doa dan restu adalah berkah untuk kebahagiaan kami, kehadiran kalian
-            tak dapat digantikan oleh apapun namun jika hadiah adalah bentuk
+            tak dapat digantikan oleh apapun. Namun, jika hadiah adalah bentuk
             tanda kasih, fitur ini akan memudahkan kalian untuk memberikan
             hadiah terbaik untuk kami.
           </GiftText>
           <GiftText>
-            Terimakasih banyak <BiSmile />
+            Terima kasih banyak <BiSmile />
           </GiftText>
         </GiftTextWrapper>
 
