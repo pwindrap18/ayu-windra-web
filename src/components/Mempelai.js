@@ -52,7 +52,7 @@ const Mempelai = () => {
             <img src={ImageWindra} alt="windra" />
             <h3>Prasetya Windra Pratama</h3>
             <p>
-              Anak pertama dari Bapak Harry Wiendharto (alm) dan Ibu Nuri
+              Anak pertama dari Bapak Harry Wiendharto (Alm.) dan Ibu Nuri
               Satyawati
             </p>
             <InstaWrapper>
