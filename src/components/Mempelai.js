@@ -27,7 +27,7 @@ const Mempelai = () => {
           <Fade bottom>
             <img src={ImageAyu} alt="ayu" />
             <h3>Yunita Ayu Pramesti</h3>
-            <p>Putri pertama dari Bapak Suwignyo Rustam dan Ibu Sugiarsi</p>
+            <p>Anak kedua dari Bapak Suwignyo Rustam dan Ibu Sugiarsi</p>
             <InstaWrapper>
               <a
                 href="https://www.instagram.com/ayuprmsty/"
@@ -52,7 +52,7 @@ const Mempelai = () => {
             <img src={ImageWindra} alt="windra" />
             <h3>Prasetya Windra Pratama</h3>
             <p>
-              Putra pertama dari Bapak Harry Wiendharto (alm) dan Ibu Nuri
+              Anak pertama dari Bapak Harry Wiendharto (alm) dan Ibu Nuri
               Satyawati
             </p>
             <InstaWrapper>
