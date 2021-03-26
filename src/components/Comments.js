@@ -88,7 +88,7 @@ const Comments = () => {
             <CommentDisplay>
               {listComments.map((comment) => (
                 <CommentItem key={comment.id}>
-                  <CommentDate>{new Date().toDateString()}</CommentDate>
+                  <CommentDate>{comment.commentDate}</CommentDate>
                   <CommentName>{comment.name}</CommentName>
                   <CommentDesc>{comment.comment}</CommentDesc>
                 </CommentItem>
