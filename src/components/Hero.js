@@ -60,7 +60,7 @@ const HeroSection = () => {
         <Fade bottom delay={2000}>
           <ScrollText>
             <p>scroll</p>
-            <p>down</p>
+            <p>ke bawah</p>
           </ScrollText>
           <HiArrowNarrowDown />
         </Fade>
@@ -74,13 +74,13 @@ export default HeroSection;
 const ArrowIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
-    margin-top: 550px;
+    margin-top: 350px;
     z-index: 3;
     color: #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `;
 
@@ -88,7 +88,7 @@ const ScrollText = styled.div`
   display: flex;
   flex-direction: column;
   text-align: end;
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 
 const HeroContainer = styled.div`
@@ -97,7 +97,7 @@ const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 800px;
+  height: 700px;
   margin-top: -80px;
   position: relative;
   z-index: 1;
