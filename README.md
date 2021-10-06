@@ -1,4 +1,4 @@
-# My own wedding website
+# My wedding website
 
 This [project](https://www.ayuwindra.online/) is made with create-react-app with styled components.
 
